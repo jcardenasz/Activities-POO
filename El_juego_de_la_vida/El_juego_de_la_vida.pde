@@ -1,17 +1,10 @@
 int rows=100,columns=70;
 int[][]grid=new int[rows][columns];
 int[][]nextG= new int[rows][columns];
-int[][]empty= new int[rows][columns];
-
 void setup(){
+  //Initial matrix
   size(1000,700);
   Array2D();
-  nextG=grid;
-  for(int i=0;i<rows;i++){
-    for (int j=0;j<columns;j++){
-      empty[i][j]=0;
-    }
-  }
 }
 
 void draw(){
@@ -70,7 +63,6 @@ void draw(){
     }
   }
   grid=nextG;
-  nextG=empty;
 }
 //Array in two dimentions which gives the first state of cells.
 void Array2D(){
